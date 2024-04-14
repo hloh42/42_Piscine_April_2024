@@ -1,0 +1,44 @@
+Ways to tackle a problem in C checklist
+
+1. Understand the Problem
+   - Identify inputs, outputs, and constraints
+   - Clarify any ambiguities in the problem statement
+
+2. Choose an Algorithm
+   - Select an appropriate algorithm based on problem requirements
+   - Consider time and space complexity of different algorithms
+
+3. Write Pseudocode
+   - Outline the steps to solve the problem in plain language
+   - Break down the problem into smaller sub-problems
+
+4. Implement the Solution
+   - Translate pseudocode into actual C code
+   - Write clean, readable, and efficient code
+   - Handle edge cases and validate inputs
+
+5. Test Your Code
+   - Test with different inputs and edge cases
+   - Verify that the function produces the correct output for all scenarios
+
+6. Optimize (if necessary)
+   - Improve efficiency by optimizing algorithms or data structures
+   - Profile code to identify performance bottlenecks
+
+7. Document Your Code
+   - Add comments and documentation to explain the purpose and logic of the code
+   - Use meaningful variable names and clear code structure
+
+8. Review and Refactor
+   - Review code for readability, correctness, and maintainability
+   - Refactor code to improve clarity and remove redundancy
+
+9. Handle Error Conditions
+   - Check for and handle invalid inputs or unexpected situations gracefully
+   - Provide meaningful error messages to aid debugging
+
+10. Consider Reusability and Modularity
+    - Design code to be reusable and modular
+    - Encapsulate functionality into functions or modules for easy integration into larger systems
+
+
