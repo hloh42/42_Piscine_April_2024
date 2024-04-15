@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 13:50:36 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/15 14:06:51 by hloh             ###   ########.fr       */
+/*   Created: 2024/04/15 11:20:47 by hloh              #+#    #+#             */
+/*   Updated: 2024/04/15 14:06:25 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 && *s1 == *s2)
+	unsigned int	i;
+
+	i = 0;
+	while (s1[i] != '\0' && s1[i] == s2[i])
 	{
-		s1++;
-		s2++;
+		if (i < n)
+			i++;
 	}
 	return (*s1 - *s2);
 }
