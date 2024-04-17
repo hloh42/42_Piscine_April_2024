@@ -6,50 +6,35 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:08:07 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/15 15:45:44 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/16 22:25:51 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-//if return (1) == true , else return (0)
-int	search(char *str, char *to_find)
-{	
-	while (*to_find)
-	{
-		if (*str != *to_find)
-		{
-			return (0);
-		}
-		str++;
-		to_find++;
-	}
-	return (1);
-}
-
 char	*ft_strstr(char *str, char *to_find)
 {
+	unsigned int	tf_size;
+	unsigned int	s_size;
 	unsigned int	i;
-	unsigned int	size;
+	unsigned int	j;
 
 	i = 0;
-	while (to_find[size] != '\0')
-	{
-		size++;
-	}
-	if (size == 0)
-	{
+	tf_size = 0;
+	s_size = 0;
+	while (str[s_size] != '\0')
+		s_size++;
+	while (to_find[tf_size] != '\0')
+		tf_size++;
+	if (s_size == 0)
 		return (str);
-	}
-	while (str[i] != '\0')
+	while (i <= s_size - tf_size)
 	{
-		if (str[i] == to_find[0])
-		{
-			if (search(&str[i], to_find))
-			{
-				return (&str[i]);
-			}		
-		}
+		j = 0;
+		while (j < tf_size && str[i + j] == to_find[j])
+			j++;
+		if (j == tf_size)
+			return (&str[i]);
 		i++;
 	}
 	return (NULL);
