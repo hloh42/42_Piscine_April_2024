@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 15:34:23 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/12 15:36:17 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/18 15:51:59 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putstr(char *str)
 	int	index;
 
 	index = 0;
-	while(str[index] != '\0')
+	while (str[index] != '\0')
 	{
 		ft_putchar(str[index]);
 		index++;
