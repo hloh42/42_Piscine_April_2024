@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 14:31:19 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/21 18:59:59 by hloh             ###   ########.fr       */
+/*   Created: 2024/04/21 15:02:55 by hloh              #+#    #+#             */
+/*   Updated: 2024/04/21 15:49:20 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+//#include <stdio.h>
 
-int	is_numeric(char c)
+int	ft_iterative_power(int nb, int power)
 {
-	if ((c >= '0') && (c <= '9'))
-	{
+	int	temp;
+
+	temp = nb;
+	if (power == 0 && nb == 0)
 		return (1);
+	if (power < 0)
+		return (0);
+	while (power > 1)
+	{
+		nb *= temp;
+		power--;
 	}
+	return (nb);
+}
+/*
+int	main(void)
+{
+	int nb = 7;
+
+	printf("7 power of 5:%d\n" , ft_iterative_power(nb, 5)); 
 	return (0);
-}
-
-int	ft_str_is_numeric(char *str)
-{	
-	int	index;
-
-	index = 0;
-	if (str[index] == '\0')
-	{
-		return (1);
-	}
-	while (str[index] != '\0')
-	{
-		if (!(is_numeric(str[index])))
-		{
-			return (0);
-		}
-		index++;
-	}
-	return (1);
-}
+}*/

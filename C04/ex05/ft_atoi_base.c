@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 16:43:52 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/21 14:29:55 by hloh             ###   ########.fr       */
+/*   Created: 2024/04/21 10:56:56 by hloh              #+#    #+#             */
+/*   Updated: 2024/04/21 11:06:14 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,35 +54,17 @@ int	check_base(char *base)
 	else
 	{
 		while (base[i] != '\0' && (base[i] != '+' || base[i] != '-'))
+		{
 			i++;
+		}
 	}
 	return (i);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
-	int	base_count;
+	int	number;
 
-	base_count = check_base(base);
-	if (ft_strlen(base) == 0 || ft_strlen(base) == 1 || check_base(base) == 0)
-		return ;
-	if (nbr == -2147483648)
-	{
-		ft_putnbr_base(-nbr / base_count, base);
-		ft_putnbr_base(-nbr % base_count, base);
-		return ;
-	}
-	else if (nbr < 0)
-	{
-		write(1, "-", 1);
-		nbr = -nbr;
-		ft_putnbr_base(nbr, base);
-	}
-	else if (nbr >= base_count)
-	{
-		ft_putnbr_base(nbr / base_count, base);
-		ft_putnbr_base(nbr % base_count, base);
-	}
-	else
-		write (1, &base[nbr], 1);
+	number = 0;
+	return (number);
 }

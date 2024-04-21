@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 15:48:42 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/18 15:50:16 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/21 13:47:34 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	unsigned int	s_size;
 	unsigned int	max_append;
 
-	if (dest == NULL || src == NULL || size == 0)
-		return (0);
 	i = 0;
 	d_size = ft_strlen(dest);
 	s_size = ft_strlen(src);

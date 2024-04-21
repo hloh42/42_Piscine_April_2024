@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 14:08:07 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/18 14:52:10 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/21 13:23:57 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strstr(char *str, char *to_find)
 		tf_size++;
 	if (tf_size == 0)
 		return (str);
-	while (i <= s_size - tf_size)
+	while (str[i] != '\0')
 	{
 		j = 0;
 		while (to_find[j] != '\0' && str[i + j] == to_find[j])

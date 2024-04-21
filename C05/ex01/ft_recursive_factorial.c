@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 14:31:19 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/21 18:59:59 by hloh             ###   ########.fr       */
+/*   Created: 2024/04/21 14:37:54 by hloh              #+#    #+#             */
+/*   Updated: 2024/04/21 15:51:41 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	is_numeric(char c)
+int	ft_recursive_factorial(int nb)
 {
-	if ((c >= '0') && (c <= '9'))
-	{
+	if (nb < 0)
+		return (0);
+	else if (nb == 0)
 		return (1);
-	}
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
+}
+/*
+int	main(void)
+{
+	int factorial = 5;
+	printf("Factorial(5):%d" , ft_recursive_factorial(factorial));
 	return (0);
-}
-
-int	ft_str_is_numeric(char *str)
-{	
-	int	index;
-
-	index = 0;
-	if (str[index] == '\0')
-	{
-		return (1);
-	}
-	while (str[index] != '\0')
-	{
-		if (!(is_numeric(str[index])))
-		{
-			return (0);
-		}
-		index++;
-	}
-	return (1);
-}
+}*/

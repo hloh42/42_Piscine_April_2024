@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:54:11 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/20 16:41:28 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/20 20:11:19 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	process_sign(char *str, unsigned int *index)
 	sign = 0;
 	while (str[*index] != '\0' && (str[*index] == '-' || str[*index] == '+'))
 	{
-		sign++;
+		if (str[*index] == '-')
+			sign++;
 		(*index)++;
 	}
 	return (sign);

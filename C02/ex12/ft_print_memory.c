@@ -6,11 +6,11 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:27:12 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/17 21:56:19 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/21 18:24:21 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*#include <unistd.h>
 #define SPACING "  "
 #define CHUNK_SIZE 16
 
@@ -122,4 +122,4 @@ int	main(void)
 	ft_print_memory(sample_text,sizeof(sample_text) - 1);
 
 	return (0);
-}
+}*/
