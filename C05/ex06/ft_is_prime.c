@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 18:26:07 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/22 18:27:56 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/22 21:16:21 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 int	ft_is_prime(int nb)
 {
-	if ()
-	{
-		return (1);
-	}
-	else
+	if (n <= 1)
 		return (0);
+	else if (n == 2)
+		return (1);
+	if (n % 2 == 0)
+		return (0);
+	r
 }
