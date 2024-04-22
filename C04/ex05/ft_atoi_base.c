@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 10:56:56 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/22 17:05:57 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/22 19:31:15 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,26 +24,6 @@ int	ft_strlen(char *s)
 	}
 	return (len);
 }
-/*
-int	check_duplicates(char *base)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	while (base[i] != '\0')
-	{
-		j = i + 1;
-		while (base[j] != '\0')
-		{
-			if (base[i] == base[j])
-				return (1);
-			j++;
-		}
-		i++;
-	}
-	return (0);
-}*/
 
 //return (0) when its invalid else return the value
 int	check_base(char *base)
@@ -64,7 +44,8 @@ int	check_base(char *base)
 		i++;
 	}
 	i = 0;
-	while (base[i] != '\0' && (base[i] != '+' || base[i] != '-'))
+	while (base[i] != '\0'
+		&& (base[i] != '+' || base[i] != '-' || base[i] == ' '))
 	{
 		i++;
 	}
@@ -137,8 +118,8 @@ int	ft_atoi_base(char *str, char *base)
 int	main(void)
 {
 	char* s = "  +--4w40222";
-	char* base = "01";
+	char* base = "0123456789";
 	//ft_atoi_base(s, base);
 	printf("Result: %d", ft_atoi_base(s, base));
 	return (0);
-	}*/
+}*/
