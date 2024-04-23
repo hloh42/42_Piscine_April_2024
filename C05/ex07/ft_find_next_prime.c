@@ -1,41 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 18:26:07 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/23 11:55:12 by hloh             ###   ########.fr       */
+/*   Created: 2024/04/23 11:55:45 by hloh              #+#    #+#             */
+/*   Updated: 2024/04/23 12:57:08 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
-
-int	is_prime_recursive(int n, int i)
-{
-	if (i * i > n)
-		return (1);
-	if (n % i == 0)
-		return (0);
-	return (is_prime_recursive(n, i + 2));
-}
+#include <stdio.h>
 
 int	ft_is_prime(int nb)
 {
+	int	n;
+
 	if (nb <= 1)
 		return (0);
-	else if (nb == 2)
+	if (nb == 2)
 		return (1);
 	if (nb % 2 == 0)
 		return (0);
-	return (is_prime_recursive(nb, 3));
+	n = 3;
+	while (n * n <= nb)
+	{
+		if (nb % n == 0)
+			return (0);
+		n = n + 2;
+	}
+	return (1);
 }
-/*
-int	main()
+
+int	ft_find_next_prime(int nb)
 {
-    printf("Is 167 prime? %d\n", ft_is_prime(167));  // Should print 1
-    printf("Is 10 prime? %d\n", ft_is_prime(10));  // Should print 0
-    return 0;
-}*/
+	int	current;
+
+	current = nb + 1;
+	printf("current val :%d\n" , current);
+	while (1)
+	{
+		if (ft_is_prime(current))
+			return (current);
+		current++;
+	}
+}
+
+int	main(void)
+{
+	printf("Next prime of 10 is : %d\n", ft_find_next_prime(10));
+}

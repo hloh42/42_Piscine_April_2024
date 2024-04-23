@@ -6,7 +6,7 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 13:58:46 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/12 15:18:52 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/23 10:57:14 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_print_args(int argc, char **argv)
 	int	j;
 
 	i = 1;
-	while (argc > 1)
+	while (i < argc)
 	{
 		j = 0;
 		while (argv[i][j] != 0)
