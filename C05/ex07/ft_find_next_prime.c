@@ -6,12 +6,12 @@
 /*   By: hloh <hloh@student.42singapore.sg>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 11:55:45 by hloh              #+#    #+#             */
-/*   Updated: 2024/04/23 12:57:08 by hloh             ###   ########.fr       */
+/*   Updated: 2024/04/24 10:40:50 by hloh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
 int	ft_is_prime(int nb)
 {
@@ -37,8 +37,7 @@ int	ft_find_next_prime(int nb)
 {
 	int	current;
 
-	current = nb + 1;
-	printf("current val :%d\n" , current);
+	current = nb;
 	while (1)
 	{
 		if (ft_is_prime(current))
@@ -46,8 +45,8 @@ int	ft_find_next_prime(int nb)
 		current++;
 	}
 }
-
+/*
 int	main(void)
 {
 	printf("Next prime of 10 is : %d\n", ft_find_next_prime(10));
-}
+}*/
